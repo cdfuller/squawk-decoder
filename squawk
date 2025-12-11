@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Wrapper script to run the squawk CLI from this repository.
+# Resolve the script location so we can call squawk_cli.py from any cwd, ignoring CDPATH quirks.
 SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 exec python "$SCRIPT_DIR/squawk_cli.py" "$@"
